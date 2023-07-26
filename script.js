@@ -9,8 +9,8 @@ toggleMenu.addEventListener("click", () => {
 });
 
 //  HIDDEN
-toggleMenu.addEventListener("click", () => {
-  closeMenu.classList.remove("show");
+closeMenu.addEventListener("click", () => {
+  navMenu.classList.remove("show");
 });
 
 // REMOVE MENU
@@ -20,6 +20,45 @@ function linkAction() {
   navMenu.classList.remove("show");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+//  Typing Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const professionSpan = document.querySelector(".home_profession");
+  const professionText = professionSpan.textContent;
+  const typingSpeed = 100; // Adjust the typing speed here (lower value for faster typing)
+  const eraseSpeed = 50; // Adjust the erase speed here (lower value for faster erasing)
+
+  function typeText() {
+    let charIndex = 0;
+    let typingInterval = setInterval(() => {
+      if (charIndex < professionText.length) {
+        professionSpan.textContent += professionText.charAt(charIndex);
+        charIndex++;
+      } else {
+        clearInterval(typingInterval);
+        setTimeout(eraseText, 1000); // Add a pause before erasing the text
+      }
+    }, typingSpeed);
+  }
+
+  function eraseText() {
+    let charIndex = professionText.length - 1;
+    let eraseInterval = setInterval(function () {
+      if (charIndex >= 0) {
+        professionSpan.textContent = professionSpan.textContent.slice(
+          0,
+          charIndex
+        );
+        charIndex--;
+      } else {
+        clearInterval(eraseInterval);
+        setTimeout(typeText, 500); // Add a pause before typing again
+      }
+    }, eraseSpeed);
+  }
+
+  typeText();
+});
 
 // SCROLL SECTIONS ACTIVE LINK
 // const sections = document.querySelectorAll("section[id]");
