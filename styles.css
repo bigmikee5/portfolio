@@ -234,8 +234,8 @@ img {
 }
 
 .home_profession {
-  font-size: var(--small-font-size);
-  color: var(--first-color-lighten);
+  font-size: var(--font-semi-bold);
+  color: gray;
 }
 
 .home_social {

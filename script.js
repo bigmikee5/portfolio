@@ -24,7 +24,7 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 //  Typing Animation
 document.addEventListener("DOMContentLoaded", () => {
   const professionSpan = document.querySelector(".home_profession");
-  const professionText = professionSpan.textContent;
+  const professionText = "Frontend Developer";
   const typingSpeed = 150; // Adjust the typing speed here (lower value for faster typing)
   const eraseSpeed = 90; // Adjust the erase speed here (lower value for faster erasing)
 
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (charIndex < professionText.length) {
         professionSpan.textContent += professionText.charAt(charIndex);
         charIndex++;
+        console.log(professionText);
       } else {
         clearInterval(typingInterval);
         setTimeout(eraseText, 1000); // Add a pause before erasing the text
