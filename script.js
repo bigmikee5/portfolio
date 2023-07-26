@@ -25,8 +25,8 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 document.addEventListener("DOMContentLoaded", () => {
   const professionSpan = document.querySelector(".home_profession");
   const professionText = professionSpan.textContent;
-  const typingSpeed = 100; // Adjust the typing speed here (lower value for faster typing)
-  const eraseSpeed = 50; // Adjust the erase speed here (lower value for faster erasing)
+  const typingSpeed = 150; // Adjust the typing speed here (lower value for faster typing)
+  const eraseSpeed = 90; // Adjust the erase speed here (lower value for faster erasing)
 
   function typeText() {
     let charIndex = 0;
