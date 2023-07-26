@@ -353,14 +353,17 @@ img {
 .skills_data {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 0 var(--mb-2);
   margin-bottom: var(--mb-4);
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 1px var(--first-color-dark);
 }
 .skills_data .bx {
-  font-size: 8rem;
+  font-size: 2rem;
   color: var(--first-color);
   transition: ease-in 0.6s;
 }
