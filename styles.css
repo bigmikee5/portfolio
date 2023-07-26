@@ -1,4 +1,5 @@
 /* ::::: GOOGLE FONTS :::::::::::: */
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,800;1,100;1,200;1,400;1,500;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&family=Bellefair&family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Roboto:wght@100&display=swap");
 
 /* :::::::: VARIABLES CSS :::::::: */
@@ -20,7 +21,7 @@
   --first-color-lighten: #fffafa;
 
   /* :::::: fonts and typography */
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Roboto", sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -346,46 +347,27 @@ img {
   font-size: var(--h3-font-size);
   color: var(--first-color);
   margin-bottom: var(--mb-2);
+  text-align: center;
 }
 
 .skills_data {
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   margin: 0 var(--mb-2);
   margin-bottom: var(--mb-4);
+}
+.skills_data .bx {
+  font-size: 8rem;
+  color: var(--first-color);
+  transition: ease-in 0.6s;
 }
 
 .skills_name {
   text-transform: uppercase;
 }
-
-.skills_bar {
-  position: absolute;
-  bottom: -0.75rem;
-  height: 0.25rem;
-  background-color: var(--first-color);
-}
-
-.skills_html {
-  width: 90%;
-}
-
-.skills_css {
-  width: 70%;
-}
-
-.skills_javascript {
-  width: 55%;
-}
-
-/* .skills_tailwindcss {
-  width: 40%;
-}
-
-.skills_php {
-  width: 25%;
-} */
 
 /* :::: EDUCATION :::: */
 .education_container {
@@ -659,6 +641,10 @@ footer {
 
   .about_information {
     padding-left: 4rem;
+  }
+  .skills_data {
+    align-items: center;
+    justify-content: space-between;
   }
 
   .education_time {
